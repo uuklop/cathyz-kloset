@@ -1,0 +1,217 @@
+@import "default.css";
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white-color);
+    border-bottom: .1rem solid var(--light-color);
+    padding:1.5rem 0;
+}
+
+header .logo{
+    margin-left: 9%;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: var(--black-color);
+    font-size: 2.5rem;
+}
+
+header .logo span{
+    padding-left: 1rem;
+}
+.navbar .links a{
+    font-size: 2rem;
+    margin-left: 3rem;
+    color: var(--black-color);
+    font-weight: 500;
+
+}
+header .logo:hover{
+    letter-spacing: .04rem;
+    color: var(--orange);
+}
+.navbar .links a:hover{
+    letter-spacing: .1rem;
+    color: var(--orange);
+    border-bottom: .1rem solid var(--orange);
+    transition: .1s linear;
+   
+}
+div.fa-bars{
+    display: none;
+}
+header .logo span{
+    color: var(--orange);
+}
+
+
+header .icons{
+    padding-right: 9%;
+}
+
+div.fa-bars,
+header .icons div,
+header .icons a{
+    background: var(--black-color);
+    height: 4rem;
+    width: 4rem;
+    font-size: 1.7rem;
+    line-height: 4rem;
+    color:var(--white-color);
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: .7rem;
+}
+
+div.fa-bars:hover,
+header .icons div:hover,
+header .icons a:hover{
+    background: var(--orange);
+    color: #fff;
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+header.active{
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 1000;
+}
+
+div.fa-bars,
+.navbar .fa-times,
+.navbar .user h3,
+.navbar .user img{
+    display: none;
+}
+
+
+/* media queries */
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 1.5rem;
+    }
+
+    section{
+        padding: 1.5rem;
+    }
+
+    header .icons{
+        padding-right: 1.5%;
+    }
+
+    header .logo{
+        padding-left: 1.5%;
+    }
+    .deal .row .text{
+        font-size: 2rem;
+    }
+
+
+}
+
+
+@media (max-width:750px){
+    div.fa-bars,
+    .navbar .fa-times,
+    .navbar .user h3,
+    .navbar .user img{
+        display: block;
+    }
+    header{
+        justify-content:space-between;
+    }
+    
+    header div.fa-bars{
+        float: left;
+    }
+    .navbar .links a{
+        display: none;
+    }
+    .navbar{
+        position: fixed;
+        top: 0;
+        left: -120%;
+        height: 100%;
+        background: var(--white-color);
+        padding:3rem;
+        width: 30rem;
+        z-index: 200;
+    
+    }
+    
+    .navbar .user{
+        text-align: center;
+        margin: 3rem auto;
+    }
+    
+    .navbar .user img{
+        height: 15rem;
+        width: 15rem ;
+        margin-left: 5rem;
+        padding: .2rem;
+        border-radius: 50%;
+        border: .5rem solid var(--white-color);
+        object-fit:cover;
+        box-shadow: 5rem 2rem 0 -3rem var(--orange),
+                    -5rem -2rem 0 -3rem var(--orange),
+                    0 .5rem 1rem rgba(0,0,0,.3) ;
+    }
+    
+    
+    
+    .navbar .user h3{
+        padding-top: .5rem;
+        color: var(--black-color);
+        font-weight: 500;
+        font-size: 2rem;
+        margin-left: 0;
+
+    }
+    
+    .navbar .links a{
+        display: block;
+        border-bottom: .1rem solid var(--light-color);
+        font-size: 2rem;
+        padding:1.5rem 0;
+        color: var(--black-color);
+    
+    }
+    
+    .navbar .links a:last-child{
+        border: none;
+    }
+    
+    .navbar .links a:hover{
+        letter-spacing: .2rem;
+        color: var(--orange);
+    }
+    
+    .navbar #close{
+        position: absolute;
+        top: 1rem;
+        right: 3rem;
+        font-size: 3rem;
+        cursor: pointer ;
+        color: var(--black-color);
+    }
+    
+    .navbar #close:hover{
+        color: var(--orange);
+    }
+    
+    .navbar.active{
+        left: 0;
+        box-shadow: 0 0 0 100vw var(--light-color);
+
+}
+}
